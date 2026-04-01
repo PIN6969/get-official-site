@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="contact_page_title">聯繫我們</title>
+    <style>
+      html {
+        background-color: #0f0f0f;
+      }
+      body.page-contact {
+        margin: 0;
+        background-color: #0f0f0f;
+        color: #f2f2f2;
+      }
+    </style>
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-contact">
+    <header class="site-header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2">
+        <div class="container-fluid px-3 px-lg-4">
+          <a class="navbar-brand m-0" href="/index.html">
+            <img src="./src/assets/img/img_logo.png" alt="" class="site-header__logo" width="120" height="40" />
+          </a>
+
+          <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
+            <div class="dropdown site-header__lang">
+              <button
+                class="btn btn-link p-0 border-0 site-header__lang-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="./src/assets/img/img_lan_tw.png" alt="" class="site-header__lang-icon" width="32" height="32" data-lang-flag />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end site-header__lang-menu">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-TW">
+                    <img src="./src/assets/img/img_lan_tw.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_TW">繁體中文</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-CN">
+                    <img src="./src/assets/img/img_lan_cn.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_CN">简体中文</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="en">
+                    <img src="./src/assets/img/img_lan_en.png" alt="" width="24" height="24" /> <span data-i18n="lang_en">English</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="th">
+                    <img src="./src/assets/img/img_lan_tai.png" alt="" width="24" height="24" /> <span data-i18n="lang_th">ไทย</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="vi">
+                    <img src="./src/assets/img/img_lan_vi.png" alt="" width="24" height="24" /> <span data-i18n="lang_vi">Tiếng Việt</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0 shadow-none px-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileNavContact"
+              aria-controls="mobileNavContact"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNavContact">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-products" data-home-section-link data-i18n="nav_products">公司產品</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-advantage" data-home-section-link data-i18n="nav_advantage">包網優勢</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-templates" data-home-section-link data-i18n="nav_templates">模板展示</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-tech" data-home-section-link data-i18n="nav_tech">技術支援</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-games" data-home-section-link data-i18n="nav_games">遊戲開發</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="/index.html#section-business" data-home-section-link data-i18n="nav_business">商務合作</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 ms-lg-3 flex-wrap justify-content-lg-end">
+              <a
+                class="btn btn-outline-light btn-sm rounded-pill px-3"
+                href="https://demo.5899.ws/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="btn_exclusive"
+                >獨家遊戲</a
+              >
+              <a class="btn btn-light btn-sm rounded-pill px-3 text-dark" href="/contact.html" data-i18n="btn_contact">聯繫我們</a>
+              <div class="dropdown site-header__lang">
+                <button class="btn btn-link p-0 border-0 site-header__lang-btn" type="button" data-bs-toggle="dropdown">
+                  <img src="./src/assets/img/img_lan_tw.png" alt="" class="site-header__lang-icon" width="32" height="32" data-lang-flag />
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end site-header__lang-menu">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-TW">
+                      <img src="./src/assets/img/img_lan_tw.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_TW">繁體中文</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-CN">
+                      <img src="./src/assets/img/img_lan_cn.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_CN">简体中文</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="en">
+                      <img src="./src/assets/img/img_lan_en.png" alt="" width="24" height="24" /> <span data-i18n="lang_en">English</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="th">
+                      <img src="./src/assets/img/img_lan_tai.png" alt="" width="24" height="24" /> <span data-i18n="lang_th">ไทย</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="vi">
+                      <img src="./src/assets/img/img_lan_vi.png" alt="" width="24" height="24" /> <span data-i18n="lang_vi">Tiếng Việt</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="offcanvas offcanvas-top text-bg-dark d-lg-none"
+        tabindex="-1"
+        id="mobileNavContact"
+        aria-label="Mobile menu"
+        data-bs-backdrop="false"
+      >
+        <div class="offcanvas-body d-flex flex-column gap-2">
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-products" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_products"
+            >公司產品</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-advantage" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_advantage"
+            >包網優勢</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-templates" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_templates"
+            >模板展示</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-tech" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_tech"
+            >技術支援</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-games" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_games"
+            >遊戲開發</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="/index.html#section-business" data-home-section-link data-bs-dismiss="offcanvas" data-i18n="nav_business"
+            >商務合作</a
+          >
+          <hr class="border-secondary" />
+          <a
+            class="btn menu-btn"
+            href="https://demo.5899.ws/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="btn_exclusive"
+            >獨家遊戲</a
+          >
+          <a class="btn menu-btn menu-btn-contact" href="/contact.html" data-i18n="btn_contact">聯繫我們</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-showcase">
+      <div class="contact-showcase__inner">
+        <h1 class="contact-showcase__title">榮耀團隊</h1>
+        <p class="contact-showcase__subtitle">
+          如需諮詢合作或服務細節，歡迎由官方聯絡方式與我們接洽。<br />
+          請務必確認官方帳號，以保障您的權益與資訊安全。
+        </p>
+
+        <div class="contact-cards">
+          <article class="contact-card">
+            <h2 class="contact-card__title">官方商務</h2>
+            <a
+              class="contact-card__qr-link"
+              href="./src/assets/img/img_qrcode_tg.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="開啟官方商務 QRCode 圖片"
+            >
+              <img class="contact-card__qr" src="./src/assets/img/img_qrcode_tg.jpg" alt="官方商務 Telegram QRCode" />
+            </a>
+            <a class="contact-card__action-btn" href="https://t.me/Y_88GT88GT" target="_blank" rel="noopener noreferrer">
+              <img src="./src/assets/icon/Telegram.svg" alt="" aria-hidden="true" />
+              <span>@Y_88GT88GT</span>
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <h2 class="contact-card__title">官方信箱</h2>
+            <button
+              class="contact-card__action-btn contact-card__action-btn--mail"
+              type="button"
+              data-copy-email="Y_88GT88GT@gmail.com"
+              aria-label="複製官方信箱"
+            >
+              <img src="./src/assets/icon/mail.svg" alt="" aria-hidden="true" />
+              <span>Y_88GT88GT@gmail.com</span>
+            </button>
+          </article>
+        </div>
+
+        <p class="contact-showcase__copyright">GET版權所有</p>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

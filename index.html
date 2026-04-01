@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta_title">Official Site</title>
+    <style>
+      html {
+        background-color: #0f0f0f;
+      }
+      body.page-home {
+        margin: 0;
+        background-color: #0f0f0f;
+        color: #f2f2f2;
+      }
+    </style>
+    <link rel="stylesheet" href="/src/styles/main.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="page-home">
+    <header class="site-header fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark py-2">
+        <div class="container-fluid px-3 px-lg-4">
+          <a class="navbar-brand m-0" href="/">
+            <img src="../src/assets/img/img_logo.png" alt="" class="site-header__logo" width="120" height="40" />
+          </a>
+
+          <div class="d-flex align-items-center gap-2 ms-auto d-lg-none">
+            <div class="dropdown site-header__lang">
+              <button
+                class="btn btn-link p-0 border-0 site-header__lang-btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                aria-label="Language"
+              >
+                <img src="./src/assets/img/img_lan_tw.png" alt="" class="site-header__lang-icon" width="32" height="32" data-lang-flag />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end site-header__lang-menu">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-TW">
+                    <img src="./src/assets/img/img_lan_tw.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_TW">繁體中文</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-CN">
+                    <img src="./src/assets/img/img_lan_cn.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_CN">简体中文</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="en">
+                    <img src="./src/assets/img/img_lan_en.png" alt="" width="24" height="24" /> <span data-i18n="lang_en">English</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="th">
+                    <img src="./src/assets/img/img_lan_tai.png" alt="" width="24" height="24" /> <span data-i18n="lang_th">ไทย</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="vi">
+                    <img src="./src/assets/img/img_lan_vi.png" alt="" width="24" height="24" /> <span data-i18n="lang_vi">Tiếng Việt</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button
+              class="navbar-toggler border-0 shadow-none px-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileNav"
+              aria-controls="mobileNav"
+              aria-label="Menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse d-none d-lg-flex" id="desktopNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-products" data-i18n="nav_products">公司產品</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-advantage" data-i18n="nav_advantage">包網優勢</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-templates" data-i18n="nav_templates">模板展示</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-tech" data-i18n="nav_tech">技術支援</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-games" data-i18n="nav_games">遊戲開發</a>
+              </li>
+              <li class="nav-item">
+                <a class="header-nav-link" href="#section-business" data-i18n="nav_business">商務合作</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center gap-2 ms-lg-3 flex-wrap justify-content-lg-end">
+              <a
+                class="btn btn-outline-light btn-sm px-3 header-game-btn"
+                href="https://demo.5899.ws/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="btn_exclusive"
+                >獨家遊戲</a
+              >
+              <a class="btn btn-light btn-sm px-3  header-contact-btn" href="/contact.html" data-i18n="btn_contact">聯繫我們</a>
+              <div class="dropdown site-header__lang">
+                <button
+                  class="btn btn-link p-0 border-0 site-header__lang-btn"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="./src/assets/img/img_lan_tw.png" alt="" class="site-header__lang-icon" width="32" height="32" data-lang-flag />
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end site-header__lang-menu">
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-TW">
+                      <img src="./src/assets/img/img_lan_tw.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_TW">繁體中文</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="zh-CN">
+                      <img src="./src/assets/img/img_lan_cn.png" alt="" width="24" height="24" /> <span data-i18n="lang_zh_CN">简体中文</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="en">
+                      <img src="./src/assets/img/img_lan_en.png" alt="" width="24" height="24" /> <span data-i18n="lang_en">English</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="th">
+                      <img src="./src/assets/img/img_lan_tai.png" alt="" width="24" height="24" /> <span data-i18n="lang_th">ไทย</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center gap-2" data-set-lang="vi">
+                      <img src="./src/assets/img/img_lan_vi.png" alt="" width="24" height="24" /> <span data-i18n="lang_vi">Tiếng Việt</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="offcanvas offcanvas-top text-bg-dark d-lg-none"
+        tabindex="-1"
+        id="mobileNav"
+        aria-label="Mobile menu"
+        data-bs-backdrop="false"
+      >
+        <div class="offcanvas-body d-flex flex-column gap-2">
+          <a class="btn btn-outline-light menu-section-btn" href="#section-products" data-bs-dismiss="offcanvas" data-i18n="nav_products"
+            >公司產品</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="#section-advantage" data-bs-dismiss="offcanvas" data-i18n="nav_advantage"
+            >包網優勢</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="#section-templates" data-bs-dismiss="offcanvas" data-i18n="nav_templates"
+            >模板展示</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="#section-tech" data-bs-dismiss="offcanvas" data-i18n="nav_tech"
+            >技術支援</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="#section-games" data-bs-dismiss="offcanvas" data-i18n="nav_games"
+            >遊戲開發</a
+          >
+          <a class="btn btn-outline-light menu-section-btn" href="#section-business" data-bs-dismiss="offcanvas" data-i18n="nav_business"
+            >商務合作</a
+          >
+          <hr class="border-secondary" />
+          <a
+            class="btn menu-btn"
+            href="https://demo.5899.ws/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="btn_exclusive"
+            >獨家遊戲</a
+          >
+          <a class="btn menu-btn menu-btn-contact" href="/contact.html" data-i18n="btn_contact">聯繫我們</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="section-banner" class="section-banner">
+        <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="false">
+          <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+              <div class="section-banner__media">
+                <video
+                  class="section-banner__video"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="auto"
+                  poster="./src/assets/img/img_open_intro_poster.jpg"
+                >
+                  <source src="./src/assets/video/vid_open_intro_bg.mp4" type="video/mp4" />
+                </video>
+                <div class="section-banner__overlay" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-banner__headlines">
+          <p class="section-banner__line section-banner__line--en">
+            <span class="section-banner__line-inner">
+              <span class="section-banner__line-get">GET</span>
+              <span class="section-banner__line-text">your glory</span>
+            </span>
+          </p>
+          <p class="section-banner__line section-banner__line--zh">
+            <span class="section-banner__line-inner">獲得您專屬榮耀</span>
+          </p>
+        </div>
+        <a class="section-banner__scroll-btn" href="#section-products" aria-label="Scroll to next section">
+          <span class="section-banner__scroll-text">SCROLL</span>
+          <img class="section-banner__scroll-icon" src="./src/assets/icon/go.svg" alt="" />
+        </a>
+      </section>
+
+      <section id="section-products" class="section-products">
+        <div class="hero-container">
+          <div class="hero-top">
+            <div class="hero-content">
+              <h1>核心服務 多元整合</h1>
+              <p>
+                我們提供包網平台、獨立遊戲開發與實體遊戲機台等多項服務，<br />並整合前台、後台、遊戲串接與系統規劃，協助客戶打造更完整的營運架構。
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="cards-wrapper cards-wrapper--desktop">
+              <article class="feature-card card-game">
+                <div class="card-header">
+                  <h2>獨家遊戲</h2>
+                </div>
+                <div class="card-image">
+                  <img class="section-products_pic" alt="獨家遊戲示意圖" src="./src/assets/img/img_companyserve_game.png" />
+                </div>
+                <div class="card-body">
+                  <p>獨家開發電子遊戲，打造多元遊玩體驗</p>
+                  <a href="https://demo.5899.ws/" target="_blank" rel="noopener noreferrer" class="btn-experience">前往體驗</a>
+                </div>
+              </article>
+
+              <article class="feature-card card-site">
+                <div class="card-header">
+                  <h2>包網建站</h2>
+                </div>
+                <div class="card-image">
+                  <img class="section-products_pic" alt="包網建站示意圖" src="./src/assets/img/img_companyserve_web.png" />
+                </div>
+                <div class="card-body">
+                  <ul class="products-bullets">
+                    <li>多檯遊戲</li>
+                    <li>快速建站</li>
+                    <li>客製模板</li>
+                  </ul>
+                  <a href="https://demo.5899.ws/" target="_blank" rel="noopener noreferrer" class="btn-experience">前往體驗</a>
+                </div>
+              </article>
+
+              <article class="feature-card card-machine">
+                <div class="card-header">
+                  <h2>實體機台</h2>
+                </div>
+                <div class="card-image">
+                  <img class="section-products_pic" alt="實體機台示意圖" src="./src/assets/img/img_game_machine.png" />
+                </div>
+                <div class="card-body">
+                  <p>結合現場機台互動與全螢幕大畫面呈現，遊戲應有盡有，帶來更直接、更沉浸的娛樂體驗。</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="category-swiper-wrapper cards-wrapper--mobile">
+              <button class="products-swiper-nav products-swiper-nav--prev" type="button" aria-label="上一張">
+                <span aria-hidden="true"></span>
+              </button>
+              <swiper-container
+                class="products-swiper"
+                init="false"
+                slides-per-view="1.12"
+                centered-slides="true"
+                slides-per-group="1"
+                watch-slides-progress="true"
+                space-between="16"
+                grab-cursor="true"
+              >
+                <swiper-slide>
+                  <article class="feature-card card-site">
+                    <div class="card-header">
+                      <h2>包網建站</h2>
+                    </div>
+                    <div class="card-image">
+                      <img class="section-products_pic" alt="包網建站示意圖" src="./src/assets/img/img_companyserve_web.png" />
+                    </div>
+                    <div class="card-body">
+                      <ul class="products-bullets">
+                        <li>多檯遊戲</li>
+                        <li>快速建站</li>
+                        <li>客製模板</li>
+                      </ul>
+                      <a href="https://demo.5899.ws/" target="_blank" rel="noopener noreferrer" class="btn-experience">前往體驗</a>
+                    </div>
+                  </article>
+                </swiper-slide>
+
+                <swiper-slide>
+                  <article class="feature-card card-game">
+                    <div class="card-header">
+                      <h2>獨家遊戲</h2>
+                    </div>
+                    <div class="card-image">
+                      <img class="section-products_pic" alt="獨家遊戲示意圖" src="./src/assets/img/img_companyserve_game.png" />
+                    </div>
+                    <div class="card-body">
+                      <p>獨家開發電子遊戲，打造多元遊玩體驗</p>
+                      <a href="https://demo.5899.ws/" target="_blank" rel="noopener noreferrer" class="btn-experience">前往體驗</a>
+                    </div>
+                  </article>
+                </swiper-slide>
+
+                <swiper-slide>
+                  <article class="feature-card card-machine">
+                    <div class="card-header">
+                      <h2>實體機台</h2>
+                    </div>
+                    <div class="card-image">
+                      <img class="section-products_pic" alt="實體機台示意圖" src="./src/assets/img/img_game_machine.png" />
+                    </div>
+                    <div class="card-body">
+                      <p>結合現場機台互動與全螢幕大畫面呈現，遊戲應有盡有，帶來更直接、更沉浸的娛樂體驗。</p>
+                    </div>
+                  </article>
+                </swiper-slide>
+              </swiper-container>
+              <button class="products-swiper-nav products-swiper-nav--next" type="button" aria-label="下一張">
+                <span aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-advantage" class="section-advantage  ">
+          <div class="hero-bg"></div>
+          <div class="container hero-content">
+            <div class="hero-header">
+              <div class="title-group">
+                <h1 class="main-title">包網優勢</h1>
+                <h2 class="sub-title">打造您專屬娛樂版圖</h2>
+              </div>
+            </div>
+            <div class="main-content">
+              <div class="advantage-cards">
+                <swiper-container
+                  class="advantage-swiper"
+                  init="false"
+                  slides-per-view="1"
+                  slides-per-group="1"
+                  space-between="20"
+                  grab-cursor="true"
+                >
+                  <swiper-slide>
+                    <div class="cards-list">
+                      <h3 class="section-label">精緻產品打造</h3>
+                      <div class="feature-card feature-card-multi-game">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/screen.svg');" aria-label="screen Icon"></div>
+                        <div class="card-text">
+                          <h4>多檯遊玩功能</h4>
+                          <p>打造多視窗遊戲開啟功能，<br />讓玩家可一次同時遊玩多款遊戲。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/product.svg');" aria-label="Product Icon"></div>
+                        <div class="card-text">
+                          <h4>產品方案建置</h4>
+                          <p>支援 PC、H5 等多端版面規劃，<br />依照品牌需求打造更完整的網站呈現。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/Language.svg');" aria-label="Language Icon"></div>
+                        <div class="card-text">
+                          <h4>多國語言系統</h4>
+                          <p>提供多語系介面規劃，讓平台更靈活對應<br />不同地區與市場需求。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/brand.svg');" aria-label="brand Icon"></div>
+                        <div class="card-text">
+                          <h4>品牌形象製作</h4>
+                          <p>依品牌定位調整整體視覺，提供平台客製，<br />LOGO、Banner 等相關視覺設計規劃。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </swiper-slide>
+
+                  <swiper-slide>
+                    <div class="cards-list">
+                      <h3 class="section-label">強化資訊安全</h3>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/safe.svg');" aria-label="Safety Icon"></div>
+                        <div class="card-text">
+                          <h4>網站安全防護</h4>
+                          <p>提供基礎安全防護與管理規劃，協助維持平台與資料的穩定性。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/umbrella.svg');" aria-label="Lock Icon"></div>
+                        <div class="card-text">
+                          <h4>風控機制支援</h4>
+                          <p>可依需求規劃對應風控機制，降低異常風險，提升管理效率。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/lock.svg');" aria-label="Backup Icon"></div>
+                        <div class="card-text">
+                          <h4>資安管理機制</h4>
+                          <p>重視網站與資料安全維護，打造更安心的營運環境。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/backup.svg');" aria-label="Checklist Icon"></div>
+                        <div class="card-text">
+                          <h4>資料備份支援</h4>
+                          <p>提供備份與異常處理規劃，降低突發狀況帶來的影響。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </swiper-slide>
+
+                  <swiper-slide>
+                    <div class="cards-list">
+                      <h3 class="section-label">完善後台系統</h3>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/Team.svg');" aria-label="Team Icon"></div>
+                        <div class="card-text">
+                          <h4>代理團隊管理</h4>
+                          <p>提供清楚的代理架構與管理方式，協助平台更有效率地進行團隊分工與運作。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/Data.svg');" aria-label="Member Icon"></div>
+                        <div class="card-text">
+                          <h4>數據報表分析</h4>
+                          <p>提供基礎數據整合與報表查看，方便掌握平台狀況與營運方向。</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/money.svg');" aria-label="Discuss Icon"></div>
+                        <div class="card-text">
+                          <h4>代理儲值支援</h4>
+                          <p>支援代理協助處理相關流程，讓整體操作與管理更加便利順暢</p>
+                        </div>
+                      </div>
+                      <div class="feature-card">
+                        <div class="card-icon" style="--icon: url('./src/assets/icon/member.svg');" aria-label="Manage Icon"></div>
+                        <div class="card-text">
+                          <h4>會員管理系統</h4>
+                          <p>簡易直覺的代理與會員架構，方便進行使用者帳號管理。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </swiper-slide>
+                </swiper-container>
+                <div class="advantage-swiper-pagination"></div>
+              </div>
+
+              <div class="advantage-visual">
+                <img
+                  class="advantage-visual__img is-active"
+                  data-advantage-image="0"
+                  src="./src/assets/img/img_productintro_product.png"
+                  alt="產品介紹主視覺"
+                />
+                <img
+                  class="advantage-visual__img"
+                  data-advantage-image="1"
+                  src="./src/assets/img/img_productintro_infosafty.png"
+                  alt="資安防護主視覺"
+                />
+                <img
+                  class="advantage-visual__img"
+                  data-advantage-image="2"
+                  src="./src/assets/img/img_productintro_team.png"
+                  alt="團隊支援主視覺"
+                />
+              </div>
+            </div>
+          </div>
+          
+      </section>
+
+      <section id="section-templates" class="section-templates  py-5">
+        <div class="container" >
+          <div class="top-container">
+            <h2 class="section-templates__title text-center text-white fw-bold mb-4" data-i18n="templates_title">模板展示</h2>
+            <div class="device-switch-btn-wrap" role="tablist" aria-label="Template device switch">
+              <button class="device-switch-btn is-active" type="button" data-template-device-btn="pc" aria-pressed="true">
+                <img src="./src/assets/img/icon/pc.svg" alt="" />
+                <span>PC</span>
+              </button>
+              <span class="device-switch-divider" aria-hidden="true"></span>
+              <button class="device-switch-btn" type="button" data-template-device-btn="h5" aria-pressed="false">
+                <img src="./src/assets/img/icon/phone2.svg" alt="" />
+                <span>H5</span>
+              </button>
+            </div>
+          </div>
+          <div class="templates-showcase-shell">
+            <div class="templates-showcase pc-show">
+              <swiper-container class="templates-swiper" init="false">
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="0"
+                      src="./src/assets/img/webstyle/img_webstyle_orignal_pc.jpg"
+                      alt="PC 模板展示一"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="1"
+                      src="./src/assets/img/webstyle/img_webstyle_newyear_pc.jpg"
+                      alt="PC 模板展示二"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="2"
+                      src="./src/assets/img/webstyle/img_webstyle_baseball_pc.jpg"
+                      alt="PC 模板展示三"
+                    />
+                  </div>
+                </swiper-slide>
+              </swiper-container>
+              <img
+                class="section-templates__frame"
+                data-template-frame
+                src="./src/assets/img/img_webstyle_pc.png"
+                alt="電腦外框示意圖"
+              />
+            </div>
+            <div class="templates-showcase h5-show">
+              <swiper-container class="templates-swiper" init="false">
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="0"
+                      src="./src/assets/img/webstyle/img_webstyle_orignal_h5.jpg"
+                      alt="h5 模板展示一"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="1"
+                      src="./src/assets/img/webstyle/img_webstyle_newyear_h5.jpg"
+                      alt="h5 模板展示二"
+                    />
+                  </div>
+                </swiper-slide>
+                <swiper-slide>
+                  <div class="section-templates__slide">
+                    <img
+                      data-template-image="2"
+                      src="./src/assets/img/webstyle/img_webstyle_baseball_h5.jpg"
+                      alt="h5 模板展示三"
+                    />
+                  </div>
+                </swiper-slide>
+              </swiper-container>
+              <img
+                class="section-templates__frame"
+                data-template-frame
+                src="./src/assets/img/img_webstyle_h5.png"
+                alt="手機外框示意圖"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-tech" class="section-tech">
+        <div class="container">
+          <header class="section-tech__header text-center mx-auto mb-4 mb-lg-5">
+            <h2 class="section-tech__title text-white fw-bold mb-3 mb-lg-4" data-i18n="tech_heading">技術支援保障</h2>
+            <p class="section-tech__subtitle text-white mb-0" data-i18n="tech_subtitle">
+              穩定架構與安全規劃，提供更完整的平台支援
+            </p>
+          </header>
+          <div class="section-tech__grid">
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_product.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_1_title">產品方案建置</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_1_desc">
+                  支援 PC、H5 等多端版面規劃，依照品牌需求打造更完整的網站呈現。
+                </p>
+              </div>
+            </article>
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_copy.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_2_title">資料備份機制</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_2_desc">
+                  強化網站連線與存取防護，降低異常攔截與干擾風險，維持平台正常運作。
+                </p>
+              </div>
+            </article>
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_protect.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_3_title">防劫持系統</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_3_desc">
+                  提供備份與異常處理規劃，降低突發狀況對平台資料與運作造成的影響。
+                </p>
+              </div>
+            </article>
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_mainten.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_4_title">後台維護支援</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_4_desc">
+                  重視後台系統管理與日常維護，協助平台在操作與管理上更加順暢穩定。
+                </p>
+              </div>
+            </article>
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_stable.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_5_title">穩定系統架構</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_5_desc">
+                  重視整體系統配置與運作效能，協助平台在日常使用中保持穩定與流暢。
+                </p>
+              </div>
+            </article>
+            <article class="section-tech__card">
+              <div class="section-tech__card-icon">
+                <img src="./src/assets/img/img_tech_visual.png" width="144" height="144" alt="" loading="lazy" />
+              </div>
+              <div class="section-tech__card-body">
+                <h3 class="section-tech__card-title" data-i18n="tech_card_6_title">視覺設計整合</h3>
+                <p class="section-tech__card-desc" data-i18n="tech_card_6_desc">
+                  重視畫面細節與操作介面的視覺表現，兼顧美感與使用體驗的整體呈現。
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-games" class="section-games">
+        <div class="section-games__top">
+          <div class="section-games__top-bg" aria-hidden="true"></div>
+          <div class="container section-games__top-inner">
+            <div class="row align-items-center justify-content-between gy-4 section-games__top-row">
+              <div class="col-lg-4 text-center text-lg-start game-left-area">
+                <h2 class="section-games__top-title mb-2 mb-lg-3" data-i18n="games_top_title">獨家遊戲開發</h2>
+                <p class="section-games__top-subtitle mb-0" data-i18n="games_top_subtitle">多元玩法及平台體驗</p>
+              </div>
+              <div class="col-lg-4 text-center game-center-area">
+                <img
+                  class="section-games__hero-img img-fluid"
+                  src="./src/assets/img/img_game_main.png"
+                  width="560"
+                  height="400"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-lg-4 d-flex game-right-area">
+                <a
+                  class="section-games__cta"
+                  href="https://demo.5899.ws/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span data-i18n="games_cta">前往體驗</span>
+                  <img src="./src/assets/img/icon/go_arrow.svg" width="20" height="20" alt="" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-games__bottom">
+          <div class="section-games__bottom-bg" aria-hidden="true"></div>
+          <div class="container section-games__bottom-inner">
+            <h2 class="section-games__bottom-title mb-2 mb-lg-3" data-i18n="games_bottom_title">百家遊戲供應商合作夥伴</h2>
+            <p class="section-games__bottom-subtitle mb-4 mb-lg-4" data-i18n="games_bottom_subtitle">
+              我們堅持提供優質及最熱門的遊戲產品
+            </p>
+            <div class="section-games__marquee" data-game-logo-marquee-wrap>
+              <div class="section-games__marquee-viewport">
+                <div class="section-games__marquee-track" data-game-logo-marquee></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-business" class="section-business">
+        <div class="container">
+          <div class="section-business__inner">
+            <h2 class="section-business__title">立即聯繫我們</h2>
+
+            <p class="section-business__subtitle">
+              讓平台建置從現在開始<br />
+              透過更完整的規劃與服務支援完成平台建置上線
+            </p>
+
+            <div class="section-business__steps" data-business-steps>
+              <div class="section-business__step is-active" data-business-step>
+                <div class="section-business__step-index">1</div>
+                <div class="section-business__step-circle" aria-hidden="true">
+                  <span class="section-business__step-icon section-business__step-icon--discuss"></span>
+                </div>
+                <div class="section-business__step-label">需求洽談</div>
+              </div>
+
+              <div class="section-business__step" data-business-step>
+                <div class="section-business__step-index">2</div>
+                <div class="section-business__step-circle" aria-hidden="true">
+                  <span class="section-business__step-icon section-business__step-icon--check-list"></span>
+                </div>
+                <div class="section-business__step-label">簽訂協議</div>
+              </div>
+
+              <div class="section-business__step" data-business-step>
+                <div class="section-business__step-index">3</div>
+                <div class="section-business__step-circle" aria-hidden="true">
+                  <span class="section-business__step-icon section-business__step-icon--detailed"></span>
+                </div>
+                <div class="section-business__step-label">細節確認</div>
+              </div>
+
+              <div class="section-business__step" data-business-step>
+                <div class="section-business__step-index">4</div>
+                <div class="section-business__step-circle" aria-hidden="true">
+                  <span class="section-business__step-icon section-business__step-icon--lower-platform"></span>
+                </div>
+                <div class="section-business__step-label">平台部屬</div>
+              </div>
+
+              <div class="section-business__step" data-business-step>
+                <div class="section-business__step-index">5</div>
+                <div class="section-business__step-circle" aria-hidden="true">
+                  <span class="section-business__step-icon section-business__step-icon--manage"></span>
+                </div>
+                <div class="section-business__step-label">正式運營</div>
+              </div>
+            </div>
+
+            <div class="section-business__reward-title">取得您專屬的榮耀</div>
+            <a class="section-business__contact-btn" href="/contact.html" data-i18n="btn_contact">
+              聯繫我們
+            </a>
+          </div>
+        </div>
+        <div class="section-business__copyright">GET版權所有</div>
+
+        <button
+          type="button"
+          class="section-business__scroll-top"
+          data-business-scroll-top
+          aria-label="回到頁面頂部"
+        >
+          <span class="section-business__scroll-top-icon" aria-hidden="true"></span>
+        </button>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
